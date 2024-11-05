@@ -1,4 +1,3 @@
-import pizzas from "../pizzadata"
 
 export const getAllPizzasReducer=(state={}, action)=>{
     switch(action.type){
@@ -8,7 +7,7 @@ export const getAllPizzasReducer=(state={}, action)=>{
         case 'GET_PIZZAS_SUCCESS' : return{
             pizzas : action.payload
         }
-        case 'GET_PIZZAS_SUCCESS' : return{
+        case 'GET_PIZZAS_FAILED' : return{
             error: action.payload
         }
         default : return state

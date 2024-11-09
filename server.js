@@ -1,13 +1,14 @@
 const express = require("express");
 const Pizza = require('./models/pizzaModel')
-
+const cors = require('cors')
 const app = express();
 const db = require("./db.js")
 app.use(express.json());
-
+app.use(cors());
 const pizzasRoute = require('./routes/pizzasRoute')
 
 app.use('/api/pizzas/', pizzasRoute)
+
 app.get("/", (req, res) => {
     res.send("Server working " + port);
 });

@@ -1,11 +1,11 @@
 import axios from "axios";
 // dispatch function:
 // getAllPizzas: action name
-export const getAllPizzas=()=>dispatch=>{
+export const getAllPizzas=()=>async dispatch=>{
     // perform atcions:
     dispatch({type: 'GET_PIZZAS_REQUEST'})
     try{
-        const response = axios.get('./api/pizzas/getpizzas')
+        const response = await axios.get('http://localhost:8000/api/pizzas/getallpizzas')
         console.log(response);
         dispatch({type: 'GET_PIZZAS_SUCCESS', payload : response.data})
     }catch(error){

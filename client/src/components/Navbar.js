@@ -16,7 +16,7 @@ export default function Navbar() {
                             <a className="nav-link" href="#">Login </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Cart {cartstate.cartItems.length}</a>
+                            <a className="nav-link" href="/cart">Cart {cartstate.cartItems.length}</a>
                         </li>
                        
                     </ul>

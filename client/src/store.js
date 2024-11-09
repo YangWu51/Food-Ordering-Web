@@ -13,6 +13,7 @@ const initialState = {
     cartReducer : {
         cartItems : cartItems
     }
+    // cartItems : cartItems
     
 }
 

@@ -35,3 +35,16 @@ select{
   box-shadow: none !important;
   border-color: black !important;
 }
+
+.fa-plus{
+  color: blue;
+  margin: 10px;
+}
+.fa-minus{
+  color: red;
+  margin: 10px;
+
+}
+.fa-trash{
+  color: red;
+}

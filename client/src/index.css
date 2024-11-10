@@ -48,3 +48,7 @@ select{
 .fa-trash{
   color: red;
 }
+input{
+  margin-top: 15px !important;
+  box-shadow: none !important;
+}

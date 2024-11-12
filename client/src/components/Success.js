@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function loading({success}) {
+export default function Success({success}) {
     return (
         <div>
             <div class="alert alert-success" role="alert">

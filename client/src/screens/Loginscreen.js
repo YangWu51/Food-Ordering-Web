@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {useDispatch, useSelector} from 'react-redux'
-import { loginUser} from "../actions/UserActions"
+import { loginUser} from "../actions/UserActions";
+import Error from "../components/Error";
+import Loading from "../components/example";
+
 export default function Loginscreen(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const loginstate = useSelector(state => state.loginUserReducer)
+    const {loading , error} = loginstate
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -18,9 +23,14 @@ export default function Loginscreen(){
     }
     return (
         <div>
-            <div className="row justify-content-center mt-5 w-300">
-                <h2>Login</h2>
-                <div className="col-md-5 mt-5">
+            <div className="row justify-content-center">
+            <div className="col-md-5 mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+                {loading && (<Loading/>)}
+                {error && (<Error error='Invalid Credentials'/>)}
+
+                <h2 className="text-center m-2" style={{ fontSize: '35px' }}>Login</h2>
+
+                <div>
                 <input 
                 required 
                 type="text" 
@@ -37,10 +47,11 @@ export default function Loginscreen(){
                 value={password}
                 onChange={(e)=>{setPassword(e.target.value)}}/>
 
-                <button onClick={login} className="btn mt-3">LOGIN</button>
+                <button onClick={login} className="btn mt-3 mb-3">LOGIN</button>
                 <br/>
-                <a style={{textDecoration: 'none', color: 'black'}} href="/register">Click Here To Register</a>
+                <a style={{textDecoration: 'none', color: 'black'}} className="mt-2" href="/register">Click Here To Register</a>
                 </div>
+            </div>
             </div>
         </div>
     )

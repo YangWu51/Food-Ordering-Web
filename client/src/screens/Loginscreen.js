@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import { loginUser} from "../actions/UserActions"
 export default function Loginscreen(){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        if(localStorage.getItem(`currentUser`)){
+            window.location.href='/'
+        }
+    }, [])
 
     function login(){
         const user = {email , password}

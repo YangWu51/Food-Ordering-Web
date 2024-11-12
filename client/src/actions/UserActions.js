@@ -21,6 +21,7 @@ export const loginUser=(user)=>async dispatch=>{
         window.location.href='/'
     }catch(error){
         dispatch({type: 'USER_LOGIN_FAILED', payload: error})
+        
     }
 }
 

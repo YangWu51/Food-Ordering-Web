@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../actions/cartActions";
 import { deleteFromCart } from "../actions/cartActions";
 import Checkout from "../components/Checkout";
+
 export default function Cartscreen(){
     const cartstate = useSelector(state=>state.cartReducer)
     const cartItems = cartstate.cartItems
@@ -15,7 +16,7 @@ export default function Cartscreen(){
                     <h2 style={{fontSize: '45px'}}>My Cart</h2>
 
                     {cartItems.map(item=>{
-                        return <div className="flex-container">
+                        return <div className="flex-container" >
                         <div className="text-start m-1 w-100">
                             <h1>{item.name} [{item.size}]</h1>
                             <h1>Price : {item.quantity} * {item.prices[0][item.size]} = {item.price}</h1>

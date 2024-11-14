@@ -10,6 +10,7 @@ import Homescreen from './screens/Homescreen';
 import Cartscreen from './screens/Cartscreen';
 import Registerscreen from './screens/Registerscreen';
 import Loginscreen from './screens/Loginscreen';
+import Orderscreen from './screens/Orderscreen';
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,8 @@ function App() {
           <Route path="/cart" element={<Cartscreen />} />
           <Route path="/register" element={<Registerscreen />} />
           <Route path="/login" element={<Loginscreen />} />
+          <Route path="/orders" element={<Orderscreen />} />
+
         </Routes>
       </BrowserRouter>
     </div>

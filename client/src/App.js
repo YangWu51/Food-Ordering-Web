@@ -11,6 +11,11 @@ import Cartscreen from './screens/Cartscreen';
 import Registerscreen from './screens/Registerscreen';
 import Loginscreen from './screens/Loginscreen';
 import Orderscreen from './screens/Orderscreen';
+import Adminscreen from './screens/Adminscreen';
+import Userslist from './screens/Userslist';
+import Orderslist from './screens/Orderslist';
+import Pizzaslist from './screens/Pizzaslist';
+import Addpizza from './screens/Addpizza';
 
 function App() {
   useEffect(() => {
@@ -30,6 +35,15 @@ function App() {
           <Route path="/register" element={<Registerscreen />} />
           <Route path="/login" element={<Loginscreen />} />
           <Route path="/orders" element={<Orderscreen />} />
+          <Route path="/admin" element={<Adminscreen />} />
+          <Route path="/admin/userslist" element={<Userslist />} />
+          <Route path="/admin/orderslist" element={<Orderslist />} />
+          <Route path="/admin/pizzaslist" element={<Pizzaslist />} />
+          <Route path="/admin/addpizza" element={<Addpizza />} />
+
+
+
+
 
         </Routes>
       </BrowserRouter>

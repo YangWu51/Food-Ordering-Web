@@ -27,8 +27,9 @@ export default function Navbar() {
                     <ul className="navbar-nav ms-auto">
                         {currentUser ? (
                             <li className="nav-item dropdown mt-2">
-                                <a style={{color: 'black'}}
-                                    className="btn btn-secondary dropdown-toggle nav-link"
+                                <a 
+                                style={{paddingTop: '0px'}}
+                                    className=" dropdown-toggle nav-link no-padding-top "
                                     type="button"
                                     id="dropdownMenuButton"
                                     data-bs-toggle="dropdown"

@@ -16,6 +16,7 @@ import Userslist from './screens/Userslist';
 import Orderslist from './screens/Orderslist';
 import Pizzaslist from './screens/Pizzaslist';
 import Addpizza from './screens/Addpizza';
+import Editpizza from './screens/Editpizza';
 
 function App() {
   useEffect(() => {
@@ -40,9 +41,7 @@ function App() {
           <Route path="/admin/orderslist" element={<Orderslist />} />
           <Route path="/admin/pizzaslist" element={<Pizzaslist />} />
           <Route path="/admin/addpizza" element={<Addpizza />} />
-
-
-
+          <Route path="/admin/editpizza/:pizzaid" element={<Editpizza />} />
 
 
         </Routes>

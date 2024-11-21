@@ -54,7 +54,8 @@ input{
 }
 .adminfunctions{
   padding: 10px;
-  background-color: rgb(1, 1, 77);
+  background-color: #d97b4c;
+  
 }
 .adminfunctions li{
   list-style-type: none !important;
@@ -64,4 +65,7 @@ input{
   color: white !important;
   padding: 20px;
   text-decoration: none !important;
+}
+td, th, tr{
+  text-align: left !important;
 }

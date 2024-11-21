@@ -10,7 +10,7 @@ export default function Homescreen(){
     const {pizzas, error, loading} = pizzasstate
     useEffect(() => {
         dispatch(getAllPizzas())
-    }, [])
+    }, []);
     return(
         <div>
             <div className="row justify-content-center">

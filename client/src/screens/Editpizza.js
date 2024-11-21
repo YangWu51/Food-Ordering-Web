@@ -48,6 +48,7 @@ export default function Editpizza() {
     function formHandler(e) {
         e.preventDefault();
         const editedpizza = {
+            _id : pizzaid,
             name,
             image,
             description,
@@ -73,6 +74,8 @@ export default function Editpizza() {
                         {loading && (<Loading/>)}
                         {error && (<Error error='Something went wrong'/>)}
                         {editsuccess && (<Success success= 'Pizza details edited successfully'/>)}
+                        {editloading && (<Loading/>)}
+
                     </div>
                     <form onSubmit={formHandler}>
                         <input

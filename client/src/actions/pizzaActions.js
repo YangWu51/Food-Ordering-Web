@@ -6,6 +6,7 @@ export const getAllPizzas=()=>async dispatch=>{
         const response = await axios.get('/api/pizzas/getallpizzas')
         console.log(response);
         dispatch({type: 'GET_PIZZAS_SUCCESS', payload : response.data})
+        
     }catch(error){
         dispatch({type: 'GET_PIZZAS_FAILED', payload : error})
     }
@@ -39,6 +40,7 @@ export const editPizza=(editedpizza)=>async dispatch=>{
         const response = await axios.post('/api/pizzas/editpizza', {editedpizza})
         console.log(response)
         dispatch({type : 'EDIT_PIZZA_SUCCESS'})
+        window.location.href='/admin/pizzaslist'
     }catch(error){
         dispatch({type:'EDIT_PIZZA_FAILED', payload : error})
     }

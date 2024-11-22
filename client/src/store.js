@@ -4,8 +4,9 @@ import {thunk} from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {getAllPizzasReducer, addPizzaReducer, getPizzaByIdReducer,editPizzaReducer } from './reducers/pizzaReducers'
 import {cartReducer} from './reducers/cartReducer'
-import { loginUserReducer, registerUserReducer } from './reducers/userReducer'
+import { getAllUsersReducer, loginUserReducer, registerUserReducer } from './reducers/userReducer'
 import { placeOrderReducer , getUserOrdersReducer, getAllOrdersReducer} from './reducers/orderReducer'
+import { getAllUsers } from './actions/UserActions'
 
 const finalReducer = combineReducers({
     getAllPizzasReducer : getAllPizzasReducer,
@@ -18,6 +19,7 @@ const finalReducer = combineReducers({
     getPizzaByIdReducer : getPizzaByIdReducer,
     editPizzaReducer : editPizzaReducer,
     getAllOrdersReducer: getAllOrdersReducer,
+    getAllUsersReducer: getAllUsersReducer,
 })
 const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : []
 const currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null

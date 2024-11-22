@@ -5,7 +5,6 @@ import Loading from '../components/Loading';
 import Error from '../components/Error';
 import Success from "../components/Success";
 import AdminTitle from "./AdminTitle";
-import loading from "../components/example";
 
 export default function Orderslist() {
     const dispatch = useDispatch()

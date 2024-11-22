@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AdminTitle from "./AdminTitle";
 import Loading from '../components/Loading';
 import Error from '../components/Error';
-import { getAllPizzas } from "../actions/pizzaActions";
+import { deletePizza, getAllPizzas } from "../actions/pizzaActions";
 
 export default function Pizzaslist() {
     const dispatch = useDispatch();
@@ -47,7 +47,7 @@ export default function Pizzaslist() {
                                 </td>
                                 <td style={{ borderColor: "black"}}>{pizza.category}</td>
                                 <td style={{ borderColor: "black"}}>
-                                    <i className=' fa fa-trash m-1'></i>
+                                    <i className=' fa fa-trash m-1' onClick={() => {dispatch(deletePizza(pizza._id))}}></i>
                                     <Link to={`/admin/editpizza/${pizza._id}`}><i className=' fa fa-edit m-1'></i></Link>
 
                                 </td>

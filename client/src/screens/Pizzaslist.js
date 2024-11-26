@@ -29,7 +29,7 @@ export default function Pizzaslist() {
                     }}
                 >
                     <thead >
-                        <tr>
+                        <tr className='table-dark'>
                             <th style={{ borderColor: "black"}}>Name</th>
                             <th style={{ borderColor: "black"}}>Prices</th>
                             <th style={{ borderColor: "black"}}>Category</th>

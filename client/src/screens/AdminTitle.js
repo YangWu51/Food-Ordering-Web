@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Route, Routes, Link, useLocation } from "react-router-dom"; 
+import { Route, Routes, Link, useLocation, Navigate } from "react-router-dom"; 
 import Userslist from "./Userslist";
 import Orderslist from "./Orderslist";
 import Pizzaslist from "./Pizzaslist";
@@ -68,6 +68,7 @@ export default function AdminTitle() {
                     </ul>
 
                     <Routes>
+                        <Route path="/admin" element={<Navigate to="/admin/userslist" replace/>} />
                         <Route path="/admin/userslist" element={<Userslist />} />
                         <Route path="/admin/orderslist" element={<Orderslist />} />
                         <Route path="/admin/pizzaslist" element={<Pizzaslist />} />

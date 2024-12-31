@@ -15,8 +15,8 @@ export default function Loginscreen(){
         alert("Hi! You can try the following credentials:\n" +
             "Email: test@gmail.com\n" +
             "Password: 123\n" +
-            "This account has access to the admin panel.\n" +
-            "After logging in with this account, you can copy and visit this link:\n" +
+            "This account can access to the admin panel.\n" +
+            "After logging in with this account, you can visit admin panel:\n" +
             "'http://yangpizzas.com/admin'.\n" +
             "Please note: Other accounts do not have permission to access the admin panel.");
       

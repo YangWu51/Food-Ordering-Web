@@ -12,6 +12,14 @@ export default function Loginscreen(){
     const dispatch = useDispatch()
 
     useEffect(() => {
+        alert("Hi! You can try the following credentials:\n" +
+            "Email: test@gmail.com\n" +
+            "Password: 123\n" +
+            "This account has access to the admin panel.\n" +
+            "After logging in with this account, you can copy and visit this link:\n" +
+            "'http://yangpizzas.com/admin'.\n" +
+            "Please note: Other accounts do not have permission to access the admin panel.");
+      
         if(localStorage.getItem(`currentUser`)){
             window.location.href='/'
         }
@@ -34,7 +42,7 @@ export default function Loginscreen(){
                 <input 
                 required 
                 type="text" 
-                placeholder="email" 
+                placeholder="email: test@gmail.com" 
                 className="form-control w-100" 
                 value={email}
                 onChange={(e)=>{setEmail(e.target.value)}}/>
@@ -42,7 +50,7 @@ export default function Loginscreen(){
                 <input 
                 required 
                 type="text" 
-                placeholder="password" 
+                placeholder="password:123" 
                 className="form-control" 
                 value={password}
                 onChange={(e)=>{setPassword(e.target.value)}}/>

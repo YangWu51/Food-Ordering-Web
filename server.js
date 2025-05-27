@@ -17,10 +17,6 @@ app.use('/api/users/', userRoute);
 app.use('/api/orders/', ordersRoute);
 const port = process.env.PORT || 8000;
 
-// Root route
-app.get("/", (req, res) => {
-    res.send(`Server working on port ${port}`);
-});
 
 
 const path = require('path');
@@ -28,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
+
 
 app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on port ${port}`);

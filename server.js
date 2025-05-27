@@ -15,14 +15,12 @@ const ordersRoute = require('./routes/ordersRoute');
 app.use('/api/pizzas/', pizzasRoute);
 app.use('/api/users/', userRoute);
 app.use('/api/orders/', ordersRoute);
+const port = process.env.PORT || 8000;
 
 // Root route
 app.get("/", (req, res) => {
     res.send(`Server working on port ${port}`);
 });
-
-// Define port
-const port = process.env.PORT || 8000;
 
 
 const path = require('path');

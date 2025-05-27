@@ -33,7 +33,8 @@ export const getAllOrders=()=>async (dispatch, getState)=>{
     const currentUser = getState().loginUserReducer.currentUser
     dispatch({type: 'GET_ALLORDERS_REQUEST'})
     try{
-        const response = await axios.get('/api/orders/getallorders' )
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/pizzas/getallpizzas`)
+
         
         console.log(response);
         dispatch({type: 'GET_ALLORDERS_SUCCESS', payload : response.data})
@@ -47,7 +48,8 @@ export const deliverOrder =(orderid)=>async dispatch=>{
         const response = await axios.post('/api/orders/deliverorder', {orderid})
         console.log(response)
         alert('Order Delivered')
-        const orders = await axios.get('/api/orders/getallorders')
+        const orders = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/pizzas/getallpizzas`)
+
         dispatch({type : 'GET_ALLORDERS_SUCCESS', payload:orders.data})
     }catch(error){
         console.log(error)

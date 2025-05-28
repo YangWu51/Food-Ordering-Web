@@ -4,12 +4,14 @@ const { type } = require("os");
 
 const pizzaSchema = mongoose.Schema({
   name: { type: String, required: true },
-  size: { type: Array, required: true },
-  prices: { type: Array, required: true },
+  size: [],
+  prices: [],
   category: { type: String, required: true },
   image: { type: String, required: true },
   description: { type: String, required: true },
-}, { timestamps: true });
+}, {
+  timestamps: true
+});
 
 
 const pizzaModel = mongoose.model('pizzas', pizzaSchema)

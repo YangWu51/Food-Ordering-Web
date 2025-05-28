@@ -2,16 +2,18 @@ const express = require("express");
 const router = express.Router();
 const Pizza = require('../models/pizzaModel')
 
-router.get("/getallpizzas", async(req, res)=>{
-    try{
-        const pizzas = await Pizza.find({})
-        res.send(pizzas)
-    }catch(error){
-        console.error(" Error fetching pizzas:", error);
-
-        return res.status(400).json({message : error.message});
+router.get("/getallpizzas", async (req, res) => {
+    try {
+        console.log("/getallpizzas route hit");
+        const pizzas = await Pizza.find({});
+        console.log("Pizzas:", pizzas);
+        res.send(pizzas);
+    } catch (error) {
+        console.error("Error fetching pizzas:", error);
+        return res.status(400).json({ message: error.message });
     }
 });
+
 router.post("/addpizza", async(req, res) => {
     const pizza = req.body.pizza
     try{

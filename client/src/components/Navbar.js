@@ -56,7 +56,7 @@ export default function Navbar() {
                                         <li>
                                             <a
                                                 className="dropdown-item"
-                                                href="http://yangpizzas.com/admin"
+                                                href="/admin"
                                             >
                                                 Admin Panel
                                             </a>

@@ -56,7 +56,7 @@ export default function Navbar() {
                                         <li>
                                             <a
                                                 className="dropdown-item"
-                                                href="/admin"
+                                                href="/admin/userslist"
                                             >
                                                 Admin Panel
                                             </a>
